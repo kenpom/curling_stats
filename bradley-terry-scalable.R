@@ -39,6 +39,9 @@ results=gms[weight>0,.(sum(weight*(Total>Total_opp)),sum(weight*(Total<Total_opp
 lev=factor(unique(c(results$team1,results$team2)))
 results[,team1:=factor(team1,levels=lev)]
 results[,team2:=factor(team2,levels=lev)]
+btdata
+btfit(results,1)
+
 
 m=BTm(cbind(V1, V2), team1, team2, data = results, id = "tm",br=T)
 x=BTabilities(m)

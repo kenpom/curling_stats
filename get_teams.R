@@ -2,7 +2,7 @@
 get_teams = function (event_id,gender) {
   #event_id=id
   #gender='Men'
-  if (gender=='Men') {code=81} else if (gender=='Women') {code=82} else {code=83}
+  if (gender=='Men') {code=81} else if (gender=='Women') {code=82} else if (gender=='Junior Men') {code=83} else {code=84}
   url=paste0('https://www.curlingzone.com/event.php?eventid=',event_id,'&eventtypeid=',code,'&view=Teams')
   xmlFile=getURL(url)
   
